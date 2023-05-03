@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.btn_wrapper {
+  margin: 10px 0;
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: #57faf7;
+  cursor: pointer;
+  border: 0;
+}
+
+.img_item {
+  height: 150px;
+  width: auto;
+  border: 2px solid grey;
+}
+
+.add_to_cart {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 4%;
+  top: 4%;
+}
