@@ -1,8 +1,10 @@
 import React from "react";
 
-const Home = () => {
+const Home = (props) => {
+  console.log("Home_props", props);
   return (
     <div>
+      <span className="total_items">{props?.data?.length}</span>
       <img
         className="add_to_cart"
         src="https://static.vecteezy.com/system/resources/previews/004/999/463/original/shopping-cart-icon-illustration-free-vector.jpg"
@@ -16,12 +18,25 @@ const Home = () => {
           alt="mobile"
         />
 
-        <div className="text_wrapper item">
+        <div className="text_wrapper">
           <span>Iphone</span>
           <span>Price: $1000</span>
         </div>
 
-        <button className="btn_wrapper item">Add To Cart</button>
+        <button
+          className="btn_wrapper"
+          onClick={() =>
+            props.addToCartHandler({ name: "I-Phone 20", price: "$ 2000" })
+          }
+        >
+          Add To Cart
+        </button>
+        <button
+          className="btn_wrapper remove"
+          onClick={() => props.removeFromCartHandler()}
+        >
+          Remove from Cart
+        </button>
       </div>
     </div>
   );
